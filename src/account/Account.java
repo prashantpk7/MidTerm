@@ -15,6 +15,7 @@ public class Account {
         private double balance;
         private double interestRate=0.23;
         private String user;
+        double finalBalance;
  
      /**constructor that takes the initial balance
       * @param initialBalance 
@@ -56,7 +57,10 @@ public class Account {
         {
             return interestRate;
         }
-
+        public double getFinalBalance(){
+            finalBalance = balance + interestRate*balance;
+            return finalBalance;
+        }
     /**user is the read only field
      * @return the user
      */
